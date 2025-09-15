@@ -68,32 +68,12 @@ end
 
 display=1;
 if display==1
-    close all
-    subplot(211)
     loglog(f,medspec,'b','linewidth',2)
     hold on
     loglog(f,10.^(noise),'k','linewidth',2)
-    scatter(f(fc_index),medspec(fc_index),100,'dr','filled')    
     hold off
     grid on
     set(gca,'FontName','Times New Roman','FontSize',20)
-    xlabel('Hz','FontName','Times New Roman','FontSize',20)
-    ylabel('V^2/Hz','FontName','Times New Roman','FontSize',20)
-    legend('Obs','Noise','Cut-off','Location','southwest')
-
-    subplot(212)
-    loglog(f,medspec./10.^(noise),'b','linewidth',2)
-    hold on
-    loglog(f,f.*0+SN_min,'k--','linewidth',2)
-    scatter(f(fc_index),medspec(fc_index)./10.^(noise(fc_index)),100,'dr','filled')    
-    hold off
-    grid on
-    legend('Obs/Noise','SNR>3','Location','southwest')
-
-    set(gca,'FontName','Times New Roman','FontSize',20)
-    xlabel('Hz','FontName','Times New Roman','FontSize',20)
-    ylabel('Ratio Obs/noise','FontName','Times New Roman','FontSize',20)
-
-    pause
+    xlabel('')
 end
 
