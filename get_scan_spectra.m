@@ -64,9 +64,9 @@ else
 
 switch tempChoice
     case 'Tdiff'
-        Meta_Data.PROCESS.FPO7noise=load(fullfile(Meta_Data.paths.calibrations.fpo7,'FPO7_noise.mat'),'n0','n1','n2','n3');
+        Meta_Data.PROCESS.FPO7noise=load(fullfile('./FPO7','FPO7_noise.mat'),'n0','n1','n2','n3');
     otherwise
-        Meta_Data.PROCESS.FPO7noise=load(fullfile(Meta_Data.paths.calibrations.fpo7,'FPO7_notdiffnoise.mat'),'n0','n1','n2','n3');
+        Meta_Data.PROCESS.FPO7noise=load(fullfile('./FPO7','FPO7_notdiffnoise.mat'),'n0','n1','n2','n3');
 end
 
 FPO7noise   = Meta_Data.PROCESS.FPO7noise;
